@@ -1,4 +1,3 @@
-
 2-Find the maximum number in any of the three variables.
 
 Start
