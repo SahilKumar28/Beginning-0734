@@ -1,4 +1,4 @@
-1-You are working at Toyota Indus Motors and want to assemble a car. Design a flowchart with proper process modules and decision structures to replicate a pipeline producƟon.
+1-You are working at Toyota Indus Motors and want to assemble a car. Design a flowchart with proper process modules and decision structures to replicate a pipeline production.
 ![FLOWCHART ](https://github.com/user-attachments/assets/c99ab768-5795-4240-ba7d-f92d1a01348f)
 
 
