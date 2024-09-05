@@ -2,6 +2,11 @@
 ![FLOWCHART ](https://github.com/user-attachments/assets/c99ab768-5795-4240-ba7d-f92d1a01348f)
 
 
+
+
+
+
+
 2-Find the maximum number in any of the three variables.
 
 Start
