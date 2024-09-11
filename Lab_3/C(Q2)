@@ -1,1 +1,13 @@
-
+#include<stdio.h>
+int main(){
+	int a,b,temp;
+	printf("Enter the number:");
+	scanf("%d",&a);
+	printf("Enter the number:");
+	scanf("%d",&b);
+	temp =a;
+	a=b;
+	b=temp;
+	printf("The value stored in a is %d\n",a);
+	printf("The value stored in b is %d\n",b);
+}
