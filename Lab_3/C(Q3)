@@ -1,1 +1,13 @@
+#include<stdio.h>
+int main(){
+float tax_per,salary,tax,amount_left;
+printf("Enter Your Salaray:");
+scanf("%f",&salary);
+printf("Enter the tax percentage:");
+scanf("%f",&tax_per);
+tax=(tax_per/100.0)*(salary);
+amount_left=salary-tax;
+printf("Your tax will be %f\n",tax);
+printf("The amount you will be left with is %f",amount_left);
+}
 
