@@ -1,1 +1,13 @@
+#include<stdio.h>
+int main(){
+	float avg;1
+	printf("Enter the average of your car:");
+	scanf("%f",&avg);
+	float total_fuel=2414.0/avg;
+	float trip1=1207/avg;
+//	float trip2=1207/avg;
+    float price=(trip1*118)+(trip1*123);
+    printf("Total fuel consumed is %f\n",total_fuel);
+    printf("The total price is %f",price);
+}
 
