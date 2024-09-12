@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(){
+	int id,units;
+    char name[100];
+    float amount;
+	printf("Enter your Customer ID:");
+	scanf("%d",&id);
+    printf("Enter your name:");
+	scanf("%s",&name);
+	printf("Enter the units consumed:");
+	scanf("%d",&units);
+	if(units<=199){
+		amount=units*16.2;
+	}
+	else if((units>=200)&&(units<300)){
+		amount=units*20.1;
+	}
+	else if((units>=300)&&(units<500)){
+		amount=units*27.1;
+	}
+	else if(units>=500){
+		amount=units*35.9;
+	}
+
+	if(amount>18000){
+		amount=(0.15*amount)+amount;
+	}
+	printf("The total amount is %f",amount);
+}
