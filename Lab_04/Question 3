@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+	float no1,no2;
+	char opr;
+	printf("Enter the operator:");
+    scanf("%c",&opr);
+	printf("Enter first number:");
+    scanf("%f",&no1);
+    printf("Enter second number:");
+    scanf("%f",&no2);
+
+    switch(opr){
+    	case '+':printf("%f",no1+no2);
+    	         break;
+    	case '-':printf("%f",no1-no2);
+    	         break;
+    	case '*':printf("%f",no1*no2);
+    	         break;
+    	case '/':printf("%f",no1/no2);
+    	         break;
+    	default:printf("Please enter valid opeator");
+	}
+}
