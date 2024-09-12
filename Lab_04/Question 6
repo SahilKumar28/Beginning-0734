@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+	int amount;
+	float bill;
+	printf("Enter the amount:");
+	scanf("%d",&amount);
+	if(amount<500){
+		printf("No discount applicable");
+	}
+	else{
+		if(amount<2000){
+			bill=0.95*amount;
+		}
+		else if((amount>=2000)&&(amount<4000)){
+			bill=0.9*amount;
+		}
+		else if((amount>=4000)&&(amount<=6000)){
+			bill=0.8*amount;
+		}
+		else{
+			bill=0.65*amount;
+		}
+	printf("The previous amount is %d \n",amount);
+	printf("Due to discount you are saving %f \n",amount-bill);
+	printf("Your current bill is %f",bill);	
+	}	
+}
