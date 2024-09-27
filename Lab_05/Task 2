@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	char wd,vac;
+	printf("Is today a week day(T for True-F for False):");
+	scanf("%c",&wd);
+	printf("Are you on vacations(T for True-F for False):");
+	scanf(" %c",&vac);
+	if((wd=='f'||wd=='F')||(vac=='t'||vac=='T')){
+		printf("SLEEP-IN:True");
+	}
+	else{
+		printf("SLEEP-IN:False");
+	}
+}
