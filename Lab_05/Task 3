@@ -1,0 +1,59 @@
+#include<stdio.h>
+int main(){
+	char coffee,size;
+	printf("What Coffee do you want(B for Black/W for White):");
+	scanf("%c",&coffee);
+	printf("Will you like to have a double size coffee(Y for Yes-N for No):");
+	scanf(" %c",&size);
+	void white(); 
+	void black();
+	void whites();//white single
+	void blacks();
+	void whited();//white double
+	void blackd();
+	if(coffee=='W'||coffee=='w'){
+		white();
+		if(size=='N'||size=='n'){
+			whites();
+		}
+		else{
+			whited();
+		}
+	}
+	else if(coffee=='B'||coffee=='b'){
+		black();
+		if(size=='N'||size=='n'){
+			blacks();
+		}
+		else{
+			blackd();
+		}
+	}
+	}
+void white(){
+		printf("Putting water will take 15 minutes\n");
+		printf("Putting sugar will take 15 minutes\n");
+		printf("Mixing well will take 20 minutes\n");
+		printf("Adding coffee will take 2 minutes\n");
+		printf("Adding milk will take 4 minutes\n");
+		printf("Mixing well will take 20 minutes\n");
+	}
+	void black(){
+		printf("Putting water will take 20 minutes\n");
+		printf("Putting sugar will take 20 minutes\n");
+		printf("Mixing well will take 25 minutes\n");
+		printf("Adding coffee will take 15 minutes\n");
+		printf("Mixing well will take 25 minutes\n");
+	}
+	void whites(){
+		printf("It will take 1 hour 16 minutes");
+	}
+	void whited(){
+		printf("It will take 1 hour 54 minutes");
+	}
+	void blacks(){
+		printf("It will take 1 hour 45 minutes");
+	}
+	void blackd(){
+		printf("It will take 2 hour 37 minutes");
+	}
