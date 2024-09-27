@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+	int noc,grams,fat_cal;//noc is no of caloroies 
+	float per;
+	printf("Enter the number of Fat grams:");
+	scanf("%d",&grams);
+	printf("Enter the number of calories:");
+	scanf("%d",&noc);
+	if(grams<0 || noc<0){
+		printf("Error Alert");
+	}
+	else{
+	   fat_cal=grams*9;
+	   if(fat_cal>noc){
+	     	printf("Either no of calories or grams have been entered incorrectly");
+	}
+	   else{
+	     	per=(fat_cal*100.0)/noc;
+	        printf("The percentage of calories in fats is %f",per);
+	   }
+	}
+}
