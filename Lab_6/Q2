@@ -1,0 +1,26 @@
+include<stdio.h>
+//int main(){
+//int no;
+//printf("Enter a no:");
+//scanf("%d",&no);
+//if(no<=1){
+//	printf("Enter no again:");
+//	scanf("%d",&no);
+//}
+//else if(no==2){
+//	printf("It is a prime no");
+//}
+//else{
+//for(int i=2;i<no;i++){
+//	if(no%i==0){
+//		printf("It is not prime no");
+//		break;
+//	}
+//	else{
+//		if(i==(no-1)){
+//			printf("It is a prime no");
+//		}
+//	}
+//   }
+//  }
+//}
