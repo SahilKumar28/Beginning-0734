@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+	char a='A',b='C';
+    for(int i=1;i<=5;i++){
+    	if(i==1||i==5){
+    	  printf("%c %c %c %c %c\n",a,a+1,a+2,a+3,a+4);	
+    	  a=a+4;
+		}
+    	else if(i==2||i==4){
+    		printf("  %c   %c  \n",b,b+1);
+    		b=b+1;
+		}
+		else{
+			printf("    %c    \n",b+1);
+		}
+	}
+}
