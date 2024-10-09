@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+  int no,mod,temp,sum=0;
+  printf("Enter a no(ONLY THREE DIGITS):");//as mentioned in the question
+  scanf("%d",&no);//153
+  temp=no;
+  while(no>0){//1634
+  	 mod=no%10;
+  	 sum=sum+(mod*mod*mod);
+  	 no=no/10;
+  }
+  if(sum==temp){
+  	printf("It is a armstrong number");  }
+  else{
+  	printf("It is not a armstrong number");
+  }
+}
