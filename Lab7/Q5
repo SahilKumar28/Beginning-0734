@@ -1,4 +1,3 @@
-//With The help of chatgpt
 #include <stdio.h>
 int main() {
     char str[20], reverse[20];
