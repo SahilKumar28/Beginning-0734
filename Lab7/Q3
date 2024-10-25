@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+   char*ptr,*temp,i;
+   char a[100];
+   printf("Enter the string:");
+   gets(a);
+   ptr=a;
+   temp=a;
+   for(i=0;a[i]!='\0';i++){
+   	ptr++;
+   }	
+   int result=ptr-temp;
+   printf("the length of the string is %d\n\n***reversed string is***\n",result);
+   
+   char reverse[100];
+   int j=0;
+  for(i=result-1;ptr>=temp;ptr--){
+  	reverse[j]=*(temp+i);
+  	j++;
+  	i--;
+  }
+  reverse[j]='\0';
+  
+  for(i=0;i<result;i++){
+  	printf("%c",reverse[i]);
+  }
+ }
