@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+	int i,temp[6],a[6];
+   for(i=0;i<6;i++){
+   	printf("Enter the no:");
+   	scanf("%d",&a[i]);
+   }
+   
+   for(i=0;i<6;i++){
+   	if(i==0){
+   		temp[i]=a[i];
+   		a[i]=a[5];
+	   } 
+   	else{
+      temp[i]=a[i];
+   	  a[i]=temp[i-1];   		
+	   }   	  
+   }
+   	for(i=0;i<6;i++){
+   		printf("%d ",a[i]);
+	   }
+}
