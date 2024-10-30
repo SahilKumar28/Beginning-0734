@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+	int n1,n2,i,j;
+	printf("Enter starting no:");
+	scanf("%d",&n1);
+	printf("Enter ending no:");
+	scanf("%d",&n2);
+	for(i=n1;i<=n2;i++){
+	  if(i==2) printf("%d ",i);			
+		for(j=2;j<i;j++){
+			if(i%j==0){
+			 break;
+			}
+			else{
+				if(j==i-1){
+					printf("%d ",i);
+				}
+			}
+		}
+	}
+}
