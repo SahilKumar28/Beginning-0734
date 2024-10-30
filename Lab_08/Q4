@@ -1,0 +1,68 @@
+#include<stdio.h>
+int main(){
+	int row_1,col_1,row_2,col_2,i,j,k=0,l=0,sum=0,mult1=1,mult2=1,mult;
+		printf("Enter the no of rows and columns for matrix 1:");
+		scanf("%d%d",&row_1,&col_1);
+		printf("Enter the no of rows and columns for matrix 2:");
+		scanf("%d%d",&row_2,&col_2);
+		if(col_1!=row_2){
+			printf("Multiplication is not possible");
+		}
+		else{
+			
+			int matrix1[row_1][col_1],matrix2[row_2][col_2],result[row_1][col_2];
+			for(i=0;i<row_1;i++){
+				for(j=0;j<col_1;j++){
+					printf("Enter the no:");
+					scanf("%d",&matrix1[i][j]);
+				}
+			}
+			for(i=0;i<row_2;i++){
+				for(j=0;j<col_2;j++){
+					printf("Enter the no:");
+					scanf("%d",&matrix2[i][j]);
+				}
+			}
+			
+			for(i=0;i<row_1;i++){
+				for(j=0;j<col_2;j++){
+					result[i][j]=0;
+				}
+			}
+			
+			//Tryly spaking, this is from chatgpt..Anyways, I tried.
+	 for (i = 0; i < row_1; i++) {
+        for (j = 0; j < col_2; j++) {
+            for (k = 0; k < col_1; k++) {
+                result[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+        }
+    }
+    
+    for(i=0;i<row_1;i++){
+	for(j=0;j<col_2;j++){
+		printf("%d ",result[i][j]);
+	}
+	printf("\n");
+}
+
+if(col_2!=col_1){
+	printf("Matrix subtraction is not possible");
+}         
+else{
+	int subtract[row_1][col_1];
+	for(i=0;i<row_1;i++){
+		for(j=0;j<col_1;j++){
+			subtract[i][j]=matrix1[i][j]-result[i][j];
+		}
+	}
+	for(i=0;i<row_1;i++){
+		for(j=0;j<col_1;j++){
+			printf("%d ",subtract[i][j]);
+		}
+		printf("\n");
+	}
+}
+}
+
+}
