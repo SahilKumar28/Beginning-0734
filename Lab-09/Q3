@@ -1,0 +1,25 @@
+#include<stdio.h>
+int prime_check(int a){
+ int i;
+ if(a<=0)printf("Enter a valid no");
+ else if(a==2||a==1)printf("It is prime");
+ else{
+ for(i=2;i<a;i++){
+ if(a%i==0){
+ printf("It is not prime");
+ break;
+ }
+ else{
+ if(i==a-1){
+ printf("It is prime");
+ }
+ }
+ }
+ }
+ }
+int main(){
+ int n1;
+ printf("Enter the no:");
+ scanf("%d",&n1);
+ prime_check(n1);
+}
