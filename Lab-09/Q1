@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+ int i,j=0,k,error=0,done=0;
+ char a[5][20];
+ char len[5];
+ for(i=0;i<5;i++){
+ printf("Enter the string no %d:",i+1);
+ scanf("%s",a[i]);
+ len[i]=strlen(a[i]);
+ }
+
+ for(i=0;i<5;i++){
+ j=0;
+ k=len[i];
+ while(k>=0){
+ if(a[i][j]!=a[i][k-1]){
+ printf("No\n");
+ break;
+ }
+ else{
+ if(k==0)printf("Yes\n");
+ k--;
+ j++;
+ }
+ }
+ }
+ }
