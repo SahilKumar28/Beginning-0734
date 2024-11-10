@@ -1,0 +1,23 @@
+#include<stdio.h>
+void func(int array[5],int no){
+int max=array[0],i;
+for(i=0;i<no;i++){
+if(array[i]>max)max=array[i];
+}
+int min=array[0];
+for(i=0;i<no;i++){
+if(array[i]<min)min=array[i];
+}
+printf("The max and min respectively are %d,%d",max,min);
+}
+int main(){
+int n;
+printf("Enter the no of integers:");
+scanf("%d",&n);
+int a[n],i;
+    for(i=0;i<n;i++){
+    printf("Enter the no:");
+    scanf("%d",&a[i]);
+}
+func(a,n);
+}
