@@ -1,0 +1,17 @@
+#include<stdio.h>
+void swap(int a,int b);
+int main(){
+ int n1,n2;
+ printf("Enter the first no:");
+ scanf("%d",&n1);
+ printf("Enter the scond no:");
+ scanf("%d",&n2);
+ swap(n1,n2);
+}
+void swap(int a,int b){
+ int temp=a;
+ a=b;
+ b=temp;
+ printf("The first value and second value respectively are %d,%d",a,b);
+
+}
