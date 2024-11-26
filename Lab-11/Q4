@@ -1,0 +1,28 @@
+#include<stdio.h>
+struct marks{
+	int maths,science,english;
+};
+struct student{
+	char name[100];
+	int roll_no;
+	struct marks obj1;
+}obj2[2];
+int main(){
+	int i;
+	float calc,avg[2];
+	for(i=0;i<2;i++){
+	  printf("Enter your name:");
+	  scanf("%s",obj2[i].name);
+	  printf("Enter you roll no:");
+	  scanf("%d",&obj2[i].roll_no);
+	  printf("Enter your marks in maths,science,english:");
+	  scanf("%d %d %d",&obj2[i].obj1.maths,&obj2[i].obj1.science,&obj2[i].obj1.english);
+	  calc=(obj2[i].obj1.maths+obj2[i].obj1.science+obj2[i].obj1.english)/3.0;
+	  avg[i]=calc;
+	  calc=0;
+	}
+	printf("***DETAILS***\n");
+	for(i=0;i<2;i++){
+		printf("Name:%s\nRoll No:%d\nAverage:%f\n",obj2[i].name,obj2[i].roll_no,avg[i]);
+	}
+}
