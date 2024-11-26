@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+struct info{
+ char name[100];
+ int id;
+};
+int main(){
+ FILE *p1=fopen("file1.txt","r");
+ FILE *p2=fopen("file2.txt","w");
+ if(p1==NULL||p2==NULL){
+ printf("Error");
+ return 0;
+ }
+
+ struct info obj1;
+       char a[100],b[100];
+       printf("Enter the word you want to replace:");
+       scanf("%s",a);
+       printf("Enter the word you want to replace with:");
+       scanf("%s",b);
+       while(fscanf(p1,"%s %d",obj1.name,&obj1.id)==2){;
+       if(strcmp(obj1.name,a)==0){
+       strcpy(obj1.name,b);
+   }
+   fprintf(p2,"%s %d\n",obj1.name,obj1.id);
+   }
+      
+}
