@@ -1,0 +1,6 @@
+//I would have read a word first, and stored that in the array A. Then I would have initiated a loop 
+//which checks each word from Beginning Of The File till the EOF and if anf word matches the count 
+//increases. Store count in another array B, and then set count to 0 to do the same process for second word
+//, but the twist is that if that word will already exist in array A, we will skip and go to another word.
+//And this is how it goes on.
+//::Was Not Able To Code::
