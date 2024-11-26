@@ -1,0 +1,24 @@
+#include<stdio.h>
+struct compnay{
+	char name[100];
+	int year;
+	char department[5][100];
+}obj;
+int main(){
+	int i;
+	printf("Enter the name of the company:");
+	scanf("%s",obj.name);
+	printf("Enter the year when company got established:");
+	scanf("%d",&obj.year);
+    for(i=0;i<5;i++){
+    	printf("Enter the department no %d:",i+1);
+    	scanf("%s",obj.department[i]);
+	}
+	printf("***Company Details***\n");
+	printf("Company Name:%s\n",obj.name);
+	printf("Establishment Year:%d\n",obj.year);
+	for(i=0;i<5;i++){
+		printf("Department No %d:%s\n",i+1,obj.department[i]);
+	}
+	
+}
