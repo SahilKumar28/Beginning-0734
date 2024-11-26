@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+ FILE *p1=fopen("database.txt","r");
+ FILE *p2=fopen("file2.txt","w");
+ if(p1==NULL||p2==NULL){
+ printf("Error");
+ }
+ else{
+       char a[100];
+    while(fgets(a,100,p1)!=NULL){
+ fprintf(p2,"%s",a);
+ }
+ }
+
+}
