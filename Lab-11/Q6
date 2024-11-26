@@ -1,0 +1,38 @@
+#include<stdio.h>
+struct address{
+	char city[100];
+	int zip_code;
+};
+struct employee{
+	char name[100];
+	int id;
+	int salary;
+	struct address obj1;
+}obj2;
+int main(){
+	FILE *p1=fopen("database.txt","a");
+	int no,i;
+	printf("For how many employess you want to store the data:");
+	scanf("%d",&no);
+	for(i=1;i<=no;i++){
+		printf("Enter the name:");
+		scanf("%s",obj2.name);
+		printf("Enter the id:");
+		scanf("%d",&obj2.id);
+		printf("Enter the salary:");
+		scanf("%d",&obj2.salary);
+		printf("Enter the name of the city:");
+		scanf("%s",obj2.obj1.city);
+		printf("Enter the zip_code of the city:");
+		scanf("%d",&obj2.obj1.zip_code);
+		fprintf(p1,"%s %d %d %s %d\n",obj2.name,obj2.id,obj2.salary,obj2.obj1.city,obj2.obj1.zip_code);
+	}
+	fclose(p1);
+	p1=fopen("database.txt","r");
+	for(i=1;i<=no;i++){
+		while(fscanf(p1,"%s %d %d %s %d",obj2.name,&obj2.id,&obj2.salary,obj2.obj1.city,&obj2.obj1.zip_code)==5){
+			printf("%s %d %d %s %d\n",obj2.name,obj2.id,obj2.salary,obj2.obj1.city,obj2.obj1.zip_code);
+		}
+	}
+	fclose(p1);
+}
