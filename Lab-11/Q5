@@ -1,0 +1,25 @@
+#include<stdio.h>
+struct date{
+	int day,month,year;
+};
+struct event{
+	char name[100];
+	char location[100];
+	struct date obj1;
+}obj2;
+int main(){
+	printf("Enter the name of the event:");
+	scanf("%s",obj2.name);
+	printf("Enter the location of the event:");
+	scanf("%s",obj2.location);
+	printf("Enter the day of the event(If On 12 January,enter 12):");
+	scanf("%d",&obj2.obj1.day);
+	printf("Enter the month no of the event:");
+	scanf("%d",&obj2.obj1.month);
+	printf("Enter the year of the event:");
+	scanf("%d",&obj2.obj1.year);
+	printf("***Event Details***\n");
+	printf("Event Name:%s\n",obj2.name);
+	printf("Event Location:%s\n",obj2.location);
+	printf("Event Date:%d-%d-%d\n",obj2.obj1.day,obj2.obj1.month,obj2.obj1.year);
+}
