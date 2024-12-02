@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<string.h>
+struct book{
+	char title[40],author[40];
+	int year;
+	float price;
+}obj[4];
+void display(){
+	int i;
+	for(i=0;i<4;i++){
+		printf("Book%d:%s\n",i+1,obj[i].title);
+	}
+}
+void search_title(){
+	int i,check=0;
+	char name[30];
+	printf("Enter the name of the book you are searching:");
+	scanf("%s",name);
+	for(i=0;i<4;i++){
+		if(strcmp(name,obj[i].title)==0){
+			printf("The book founded\n");
+			printf("Title:%s\nAuthor:%s\nPublication_Year:%d\nPrice:%f\n",obj[i].title,obj[i].author,obj[i].year,obj[i].price);
+			check=1;
+			break;
+		}
+	}
+	if(check==0)printf("Sorry,Not in our inventory\n");
+}
+void search_author(){
+	char name[30];
+	int i,check=0;
+	printf("Enter the name of the author you are searching:");
+	scanf("%s",name);
+	for(i=0;i<4;i++){
+		if(strcmp(name,obj[i].author)==0){
+			if(check!=1)printf("The book founded\n");
+			printf("Title:%s\nAuthor:%s\nPublication_Year:%d\nPrice:%f\n",obj[i].title,obj[i].author,obj[i].year,obj[i].price);
+		    check=1;
+		}
+	}
+	if(check==0)printf("Sorry,Not in our inventory");
+}
+int main(){
+    int i;
+    for(i=0;i<4;i++){
+    	printf("Enter the name of the book:");
+    	scanf("%s",obj[i].title);
+    	printf("Enter the author of the book:");
+    	scanf("%s",obj[i].author);
+    	printf("Enter the publication year of the book:");
+    	scanf("%d",&obj[i].year);
+    	printf("Enter the price of the book:");
+    	scanf("%f",&obj[i].price);
+	}
+	display();
+	search_title();
+	search_author();
+}
