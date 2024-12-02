@@ -1,0 +1,24 @@
+#include<stdio.h>
+int i=0;
+void func(int no,int arr[100]){
+	if(i==no-1){
+		printf("%d ",arr[i]);
+	}
+	else{
+		printf("%d ",arr[i]);
+		i++;
+		func(no,arr);
+	}
+}
+int main(){
+	int n;
+	int j;
+	printf("Enter the no of element:");
+	scanf("%d",&n);
+	int a[n];
+	for(j=0;j<n;j++){
+		printf("Enter the no:");
+		scanf("%d",&a[j]);
+	}
+	func(n,a);
+}
