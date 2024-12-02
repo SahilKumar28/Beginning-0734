@@ -1,0 +1,30 @@
+//Not Sorting Properly, Only Sorting Adjacent Elements..
+#include<stdio.h>
+int i=0,temp;
+void func(int n,int arr[100]){
+	if(i==n-1){
+	     for(i=0;i<n;i++){
+	     	printf("%d ",arr[i]);
+		 }
+	}
+	else{
+		if(arr[i]>arr[i+1]){
+			temp=arr[i];
+			arr[i]=arr[i+1];
+			arr[i+1]=temp;
+		}
+		i++;
+		func(n,arr);
+	}
+}
+int main(){
+	int j=0,n;
+	printf("Enter the no of elements:");
+	scanf("%d",&n);
+	int a[n];
+	for(j=0;j<n;j++){
+		printf("Enter the no:");
+		scanf("%d",&a[j]);
+	}
+	func(n,a);
+}
