@@ -1,0 +1,45 @@
+#include<stdio.h>
+struct package{
+	char name[30],destination[30];
+	int duration,seats;
+	float cost;
+}obj[2];
+int main(){
+	int i;
+	for(i=0;i<2;i++){
+		printf("***Package No %d***\n",i+1);
+		printf("Enter the name of the package:");
+		scanf("%s",obj[i].name);
+	    printf("Enter the destination of the package:");
+		scanf("%s",obj[i].destination);
+		printf("Enter the duration(days) of the package:");
+		scanf("%d",&obj[i].duration);
+	    printf("Enter the cost of the package:");
+		scanf("%f",&obj[i].cost);
+		printf("Enter the no of seats avalable:");
+		scanf("%d",&obj[i].seats);
+	}
+	int dec,package_no;
+	do{
+		printf("1-Book A Seat\n2-Display All Packages\n3-Quit\nPress respective no for respecive service:");
+	    scanf("%d",&dec);
+		if(dec==1){
+			printf("Enter the no of the package:");
+			scanf("%d",&package_no);
+			if(obj[package_no-1].seats>0){
+				obj[package_no-1].seats--;
+				printf("Seat Succesfully Booked\n");
+			}
+			else{
+				printf("Sorry,Package Not Avaialable\n");
+			}
+		}
+		else if(dec==2){
+			for(i=0;i<2;i++){
+				if(obj[i].seats>0){
+					printf("Package_No:%d Name:%s Destination:%s Duration:%d Cost:%f Seats:%d\n",i+1,obj[i].name,obj[i].destination,obj[i].duration,obj[i].cost,obj[i].seats);
+				}
+			}
+		}
+	}while(dec!=3);
+}
