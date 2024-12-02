@@ -32,6 +32,7 @@ void func1(){
     printf("The difference between two dates is %d days(Ignoring Leap Years)\n",diff);
 }
 void func2(){
+//****Ignoring Leap Years****
 	printf("Enter the date(1 1 2001):");
         scanf("%d %d %d",&obj[0].day,&obj[0].month,&obj[0].year);
         int i=0,sum=0;
