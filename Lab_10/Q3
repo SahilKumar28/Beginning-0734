@@ -1,0 +1,20 @@
+#include<stdio.h>
+const float max_temp=67;//In Celcius
+int func(){
+	float temp=0;
+	static int count=0;
+	printf("Enter the temperature:");
+	scanf("%f",&temp);
+	printf("%d",count);
+	if(temp>max_temp)count++;
+	return count;
+}
+int main(){
+	int quit=0,a;
+	do{
+		a=func();
+		printf("Press 1 to quit or 0 to continue:");
+		scanf("%d",&quit);
+	}while(quit!=1);
+	printf("The limit was exceeded %d times\n",a);
+}
