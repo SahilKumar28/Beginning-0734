@@ -1,0 +1,84 @@
+#include<stdio.h>
+int array[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+struct demo{
+	int day,month,year;
+}obj[2];
+void func1(){
+	int i;
+	for(i=0;i<2;i++){
+        printf("Enter the date no %d(1 1 2001):",i+1);
+        scanf("%d %d %d",&obj[i].day,&obj[i].month,&obj[i].year);		
+	}
+    int sum1=0,sum2=0;
+    i=0;
+    while(i+1!=obj[0].month&&i<12){
+    	sum1=sum1+array[i];
+    	i++;
+	}
+	sum1=sum1+obj[0].day;
+	i=0;
+    while(i+1!=obj[1].month){
+    	sum2=sum2+array[i];
+    	i++;
+	}
+	sum2=sum2+obj[1].day;
+	int diff=sum2-sum1;
+	if(diff<0)diff=-diff;
+//	printf("\n***%d %d %d***\n",sum1,sum2,diff);
+    int year_calc=(obj[1].year-obj[0].year);
+    if(year_calc<0)year_calc=-year_calc;
+    year_calc=year_calc*365;
+    diff=diff+year_calc;
+    printf("The difference between two dates is %d days(Ignoring Leap Years)\n",diff);
+}
+void func2(){
+	printf("Enter the date(1 1 2001):");
+        scanf("%d %d %d",&obj[0].day,&obj[0].month,&obj[0].year);
+        int i=0,sum=0;
+        while(i+1!=obj[0].month){
+        	sum=sum+array[i];
+        	i++;
+		}
+		sum=sum+obj[0].day;
+		if(sum%7==1)printf("The day is monday\n");
+		else if(sum%7==2)printf("The Day Is Tuesday\n");
+		else if(sum%7==3)printf("The Day Is Wednesday\n");
+		else if(sum%7==4)printf("The Day Is Thursay\n");
+		else if(sum%7==5)printf("The Day Is Friday\n");
+		else if(sum%7==7)printf("The Day Is Saturday\n");
+		else if(sum%7==0)printf("The Day Is Sunday\n");
+}
+void func3(){
+	printf("Enter the date(1 1 2001):");
+        scanf("%d %d %d",&obj[0].day,&obj[0].month,&obj[0].year);
+    int i=0;
+     if ((obj[0].year % 4 == 0 && obj[0].year % 100 != 0) || (obj[0].year % 400 == 0)){
+      if(obj[0].month==2&&obj[0].day<=29&&obj[0].year<=2024){
+      	printf("The Date Is Valid\n");
+	  }	
+	  else{
+	  	printf("The date is invalid");
+	  }
+}
+	  else{
+	  	    if(obj[0].day<=array[obj[0].month-1]&&obj[0].month<=12&&obj[0].year<=2024){
+    	  printf("The date is valid\n");
+	} 
+	    else{
+		 printf("The date is invalid\n");
+	}
+	  }
+}
+int main(){
+	int dec;
+	printf("1-Difference Between Two Days\n2-Day Of The Week\n3-Check If Date Is Valid\n4-Exit\n");
+	do{
+     printf("Enter the respective no for respective service:");
+	 scanf("%d",&dec);
+	 if(dec==1)func1();		
+	 if(dec==2)func2();		
+	 if(dec==3)func3();		
+	}while(dec!=4);
+
+	
+}
