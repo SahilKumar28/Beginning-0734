@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int no,i,*ptr,max=0,previous_max,new_max;
+	printf("Enter the no of elements in the array:");
+	scanf("%d",&no);
+	ptr=(int*)calloc(no,sizeof(int));
+	for(i=0;i<no;i++){
+		printf("Enter the no:");
+	    scanf("%d",ptr+i);
+	    if(*(ptr+i)>max){
+	    	max=*(ptr+i);
+		}
+	}
+	previous_max=max;
+	max=0;
+	printf("Enter the new size of the array:");
+	scanf("%d",&no);
+	ptr=realloc(ptr,no*sizeof(int));
+	for(i=0;i<no;i++){
+		printf("Enter the no:");
+	    scanf("%d",ptr+i);
+	    if(*(ptr+i)>max){
+	    	max=*(ptr+i);
+		}
+	}
+	new_max=max;
+	printf("The maximum value in previous array and in new array are %d and %d respectively:\n",previous_max,new_max);
+    free(ptr);
+}
+   
