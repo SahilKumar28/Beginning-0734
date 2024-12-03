@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+void swaped(int*ptr1,int*ptr2,int*ptr3){
+	int temp;
+	temp=*ptr1;
+    *ptr1=*ptr2;
+    *ptr2=*ptr3;
+    *ptr3=temp;
+	printf("The new values for a,b and c are %d %d %d",*ptr1,*ptr2,*ptr3);	
+}
+int main(){
+	int a,b,c;
+	printf("Enter the value of a,b and c respectively:");
+	scanf("%d %d %d",&a,&b,&c);
+	swaped(&a,&b,&c);
+}
