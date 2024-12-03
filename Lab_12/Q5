@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+	int no,i;
+	char *ptr;
+	char name[40],id[10];
+	printf("Enter your name:");
+	fgets(name,40,stdin);
+	name[strcspn(name, "\n")] = '\0';
+    int len1=strlen(name);//Instead of asking no of characters, calculating them.
+	ptr=(char*)calloc(len1,sizeof(char));
+	strcpy(ptr,name);
+	printf("%s\n",ptr);
+	printf("Enter your student id:");
+	scanf("%s",id);
+	int len2=strlen(id);
+	ptr=realloc(ptr,(len1+len2)*sizeof(char));
+	//If i attach these strings in the format (0734 Sahil), then updating ptr will be unnecesary.
+	strcat(ptr," ");
+	strcat(ptr,id);
+	printf("%s",ptr);
+	free(ptr);
+}
